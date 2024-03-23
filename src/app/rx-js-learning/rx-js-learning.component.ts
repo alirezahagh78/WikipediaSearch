@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { share} from 'rxjs/operators';
 @Component({
   selector: 'app-rx-js-learning',
   templateUrl: './rx-js-learning.component.html',
@@ -13,21 +14,29 @@ export class RxJsLearningComponent {
     setInterval(() =>{
       observer.next('hello world');
     },2000);
-  });
+  }).pipe(share());
+
+
   ngOnInit(): void{
     const observerOne = this.observable.subscribe(
-      (value) => this.addItem(value),
+      (value) => this.addItem('observae one :' + value),
       (error) => console.log('error'),
       () => console.log('complete')
     );
     setTimeout(()=> {
-      observerOne.unsubscribe();
+      const observerTwo = this.observable.subscribe(
+        (value) => this.addItem('observae two :' + value),
+        (error) => console.log('error'),
+        () => console.log('complete')
+      );
     },6001);
   };
+
+
   addItem(value:any){
     console.log(value);
   };
   ngOnDestory(){
-    
+
   }
 }

@@ -16,20 +16,21 @@ export class CountComponent {
     let obs = new Observable((observer) => {
       let count = 0;
       setInterval(() => {
-
         observer.next(++count)
+        if(count ===5){
+          observer.error(new Error('Count Reached 5'));
+        }
+        if(count === 6){
+          observer.complete()
+        }
       }, 1000);
     });
     this.sub = obs.subscribe(
-      (count) => {
-        console.log(count),
-          (err: any) => {
-            console.log(err);
-          },
-          () => {
-            console.log('done')
-          };
-      }
+      (count) => console.log(count),
+      (err) => {
+        console.log(err);
+      },
+          () => console.log('done')
     );
 
     setTimeout(() => {
