@@ -26,5 +26,8 @@ export class RxJsLearningComponent {
   };
   addItem(value:any){
     console.log(value);
+  };
+  ngOnDestory(){
+    
   }
 }

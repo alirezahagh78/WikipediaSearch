@@ -7,6 +7,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { HttpClientModule } from "@angular/common/http";
 import { RxJsLearningComponent } from './rx-js-learning/rx-js-learning.component';
+import { CountComponent } from './count/count.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RxJsLearningComponent } from './rx-js-learning/rx-js-learning.component
     AppComponent,
     SearchBarComponent,
     PageListComponent,
-    RxJsLearningComponent
+    RxJsLearningComponent,
+    CountComponent
   ],
   imports: [
     BrowserModule,
