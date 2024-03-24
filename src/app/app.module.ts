@@ -10,6 +10,7 @@ import { RxJsLearningComponent } from './rx-js-learning/rx-js-learning.component
 import { CountComponent } from './count/count.component';
 import { SubjectComponent } from './subject/subject.component';
 import { BehaviorComponent } from './behavior/behavior.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BehaviorComponent } from './behavior/behavior.component';
     RxJsLearningComponent,
     CountComponent,
     SubjectComponent,
-    BehaviorComponent
+    BehaviorComponent,
+    ReplaySubjectComponent
   ],
   imports: [
     BrowserModule,
