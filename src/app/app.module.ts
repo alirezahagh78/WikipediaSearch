@@ -9,6 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RxJsLearningComponent } from './rx-js-learning/rx-js-learning.component';
 import { CountComponent } from './count/count.component';
 import { SubjectComponent } from './subject/subject.component';
+import { BehaviorComponent } from './behavior/behavior.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SubjectComponent } from './subject/subject.component';
     PageListComponent,
     RxJsLearningComponent,
     CountComponent,
-    SubjectComponent
+    SubjectComponent,
+    BehaviorComponent
   ],
   imports: [
     BrowserModule,
