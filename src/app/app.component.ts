@@ -16,7 +16,7 @@ export class AppComponent {
 
   OnGetTermSearch(value: string) {
     this.wikipediaService.onSearch(value).subscribe(
-      (response: WikipediaResponse[]) => {
+      (response: any) => {
         console.log(response);
         this.posts = response;
       }, (error: HttpErrorResponse) => {
